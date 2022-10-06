@@ -11,9 +11,8 @@ Welcome to meilisearch-python's documentation!
    :caption: Contents:
 
 
-.. include:: meilisearch.rst
-.. include:: meilisearch.module.rst   
-
+    
+.. include:: modules.rst
 
 Indices and tables
 ==================
