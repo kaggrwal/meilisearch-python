@@ -26,11 +26,11 @@ jobs:
       with:
         #publish_branch: doc-test
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/_build/
+        publish_dir: docs/_build/html
         force_orphan: true    
 
 
-        
+
       
 
 
