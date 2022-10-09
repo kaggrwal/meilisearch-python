@@ -1,8 +1,8 @@
 name: Documentation
 on:
   push:
-    branched:
-    - test_branch*
+    branches:
+    - test_branch
 
 jobs:
   docs:
@@ -32,7 +32,7 @@ jobs:
         publish_dir: docs/_build/html
         force_orphan: true   
 
-        
+
 
 
 
