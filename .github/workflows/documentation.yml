@@ -20,8 +20,8 @@ jobs:
       uses: dschep/install-pipenv-action@v1
     - name: Install dependencies
       run: |
-      pipenv install --dev  
-      pipenv install sphinx_rtd_theme    
+           pipenv install --dev  
+           pipenv install sphinx_rtd_theme    
     - uses: ammaraskar/sphinx-action@master
       with:
         pre-build-command: "sphinx-apidoc -f -o docs meilisearch/"
