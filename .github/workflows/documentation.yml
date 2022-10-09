@@ -22,7 +22,7 @@ jobs:
       run: pipenv install --dev    
     - uses: ammaraskar/sphinx-action@master
       with:
-        pre-build-command: "pipenv install sphinx_rtd_theme && sphinx-apidoc -f -o docs meilisearch/"
+        pre-build-command: "pip install sphinx_rtd_theme && sphinx-apidoc -f -o docs meilisearch/"
         docs-folder: "docs/"
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
