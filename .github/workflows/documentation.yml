@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: |
         pipenv install --dev
-        pip install sphinx_rtd_theme 
+        pipenv install sphinx_rtd_theme 
     - name: Build docs
       run: |
         sphinx-apidoc -f -o docs meilisearch/
