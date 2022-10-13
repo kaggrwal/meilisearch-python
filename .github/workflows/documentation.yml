@@ -1,8 +1,8 @@
 name: Documentation
 on:
   push:
-    tags:
-      - v*
+    branches:
+      - test_sphinx-build
 
 jobs:
   docs:
@@ -21,10 +21,10 @@ jobs:
     - name: Install dependencies
       run: pipenv install --dev
     - name: Build docs
-      uses: ammaraskar/sphinx-action@master
-      with:
-        pre-build-command: "pip install sphinx_rtd_theme && sphinx-apidoc -f -o docs meilisearch/"
-        docs-folder: "docs/"
+      run: |
+        pip install sphinx_rtd_theme 
+        sphinx-apidoc -f -o docs meilisearch/
+        sphinx-build ./docs/_build/html/
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
