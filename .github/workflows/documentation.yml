@@ -25,6 +25,7 @@ jobs:
         pipenv install sphinx_rtd_theme 
     - name: Build docs
       run: |
+        pipenv shell
         sphinx-apidoc -f -o docs meilisearch/
         sphinx-build docs ./docs/_build/html/
     - name: Deploy
