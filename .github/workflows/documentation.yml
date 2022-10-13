@@ -19,10 +19,11 @@ jobs:
     - name: Install pipenv
       uses: dschep/install-pipenv-action@v1
     - name: Install dependencies
-      run: pipenv install --dev
+      run: |
+        pipenv install --dev
+        pip install sphinx_rtd_theme 
     - name: Build docs
       run: |
-        pip install sphinx_rtd_theme 
         sphinx-apidoc -f -o docs meilisearch/
         sphinx-build docs ./docs/_build/html/
     - name: Deploy
